@@ -1,0 +1,7 @@
+{
+  "/api": {
+    "target": "http://adamjurczblog.com",
+    "secure": false,
+    "changeOrigin": true
+  }
+}
