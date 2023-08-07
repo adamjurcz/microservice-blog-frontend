@@ -1,6 +1,6 @@
 <div class="row d-flex justify-content-center">
 
-  <div class="col-md-4">
+  <div class="col-md-3">
     <div class="card">
       <div class="card-body p-4">
         <h5 class="text-center mb-4 pb-2">Write a Post</h5>
@@ -14,6 +14,15 @@
       <div class="card-body p-4">
         <h4 class="text-center mb-4 pb-2">Posts section</h4>
           <app-post-list></app-post-list>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <div class="card" *ngIf = "isCommentSectionActivated">
+      <div class="card-body p-4">
+        <h4 class="text-center mb-4 pb-2">Add comment to </h4>
+        <app-comment-input [postId]="postId"></app-comment-input>
       </div>
     </div>
   </div>

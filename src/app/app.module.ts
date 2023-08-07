@@ -10,6 +10,7 @@ import { NgOptimizedImage }  from "@angular/common";
 import { HttpClientModule } from "@angular/common/http";
 import { PostInputComponent } from './post-input/post-input.component';
 import {FormsModule} from "@angular/forms";
+import { CommentInputComponent } from './comment-input/comment-input.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {FormsModule} from "@angular/forms";
     PostItemComponent,
     PostsComponent,
     CommentItemComponent,
-    PostInputComponent
+    PostInputComponent,
+    CommentInputComponent
   ],
   imports: [
     BrowserModule,

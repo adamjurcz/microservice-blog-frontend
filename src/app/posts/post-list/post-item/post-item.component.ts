@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Post} from "../../post.model";
+import {CommentService} from "../../../comment-item/comment.service";
 
 @Component({
   selector: 'app-post-item',
@@ -12,13 +13,16 @@ export class PostItemComponent implements OnInit{
 
   public imageUrl: string = 'https://www.freeiconspng.com/uploads/person-icon-5.png';
 
-  constructor(){}
+  constructor(private commentService: CommentService){}
 
   ngOnInit(){
-    console.log(this.index);
   }
 
   getIndexClass(){
     return this.index === 0 ? 'd-flex flex-start' : 'd-flex flex-start mt-4';
+  }
+
+  onReply(){
+    this.commentService.switchedReplyEvent.emit(this.post.id);
   }
 }
