@@ -22,7 +22,7 @@ export class CommentInputComponent implements OnInit{
     const value = this.createCommentForm.value;
     const postId = this.postId;
     const content = value.content;
-    console.log(postId);
+
     this.commentService.addComment({content}, postId).subscribe(comment => {
       this.commentService.newCommentEvent.emit(comment);
       this.commentService.switchedReplyEvent.emit(-1);
