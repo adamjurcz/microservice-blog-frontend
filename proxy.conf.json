@@ -1,7 +1,15 @@
 {
-  "/api": {
-    "target": "http://adamjurczblog.com",
-    "secure": false,
-    "changeOrigin": true
+  "/api/v1/queries/posts": {
+    "target": "http://query-service:8084",
+    "secure": false
+  },
+  "/api/v1/posts": {
+    "target": "http://post-service:8081",
+    "secure": false
+  },
+  "/api/v1/commentary": {
+    "target": "http://commentary-service:8082",
+    "secure": false
   }
 }
+
